@@ -1,0 +1,13 @@
+{
+    "name": "jonasm/gutenberg-slider",
+    "description": "A WordPress Gutenberg Slider",
+    "type": "wordpress-plugin",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Ralf Hortt",
+            "email": "me@jonasm.de"
+        }
+    ],
+    "require": {}
+}

@@ -1,0 +1,27 @@
+{
+  "name": "gutenberg-slider",
+  "version": "0.1.0",
+  "description": "A WordPress Gutenberg Slider",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonasm/gutenberg-slider"
+  },
+  "scripts": {
+    "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "author": "Jonas Merhej",
+  "license": "GPLv2 or later",
+  "devDependencies": {
+    "@babel/preset-react": "^7.0.0",
+    "babel-preset-react": "^6.24.1",
+    "laravel-mix": "^3.0.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "lodash.times": "^4.3.2",
+    "memize": "^1.0.5"
+  }
+}

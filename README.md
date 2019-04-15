@@ -16,3 +16,14 @@ Run yarn or npm install
 ### v0.1.0
 
 * Initial release
+
+## Backend
+### The slider block
+![slider screenshot](./slider.png)
+Default classes are: 'wp-block-jonasm-slider' and 'slider'
+
+### The slide block
+![slide screenshot](./slide.png)
+Default classes are: 'jonasm-slide' and 'slide'
+
+The slider and the slide blocks also accept classes and ids

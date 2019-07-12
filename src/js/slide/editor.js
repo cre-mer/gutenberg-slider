@@ -85,7 +85,9 @@ const Editor = ( ( { attributes, setAttributes, isSelected } ) => {
         }
         const handleImage_M  = image => {
             setAttributes({
-                image_M: image.url
+                image_M: image.url,
+                image_alt: image.alt,
+                image_title: image.title
             })
         }
         const handleBackgroundImage = image => {
@@ -224,6 +226,8 @@ const Editor = ( ( { attributes, setAttributes, isSelected } ) => {
                         <img
                             className='slide-media__image'
                             src={ attributes.image_M }
+                            alt={ attributes.image_alt }
+                            title={ attributes.image_title }
                         />
                     </picture>
                 </div>

@@ -55,6 +55,16 @@ let slideSettings = {
             type: 'string',
             default: ''
         },
+
+        image_alt: {
+            type: 'string',
+            default: ''
+        },
+
+        image_title: {
+            type: 'string',
+            default: ''
+        },
     },
 
     edit: Editor,

@@ -7,6 +7,7 @@ const { Fragment } = wp.element;
 
 
 const Renderer = ( { attributes } ) => {
+    console.log(attributes);
     /**
     * Slide inline style
     */
@@ -59,6 +60,8 @@ const Renderer = ( { attributes } ) => {
                         <img
                             className='slide-media__image'
                             src={ attributes.image_M }
+                            alt={ attributes.image_alt }
+                            title={ attributes.image_title }
                         />
                     </picture>
                 </div>

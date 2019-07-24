@@ -18,6 +18,7 @@ defined('ABSPATH') || exit;
  */
 add_action('enqueue_block_editor_assets', function () {
     wp_enqueue_script('gutenberg-slider', plugins_url('/dist/js/block.js', __FILE__), [], filemtime(plugin_dir_path(__FILE__).'dist/js/block.js'), true);
+    wp_enqueue_script('gutenberg-slider-ui-js', plugins_url('/src/ui-js/index.js', __FILE__), [ 'jquery' ], filemtime(plugin_dir_path(__FILE__).'src/ui-js/index.js'), true);
     wp_enqueue_style('gutenberg-slider-editor', plugins_url('dist/css/editor.css', __FILE__));
 });
 

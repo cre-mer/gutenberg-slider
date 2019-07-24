@@ -16,60 +16,61 @@ const { registerBlockType } = wp.blocks;
 * Define Slide settings
 */
 let slideSettings = {
-    title: __( 'Slide' ),
+	title: __( 'Slide' ),
 
-    parent: [ 'jonasm/slider' ],
+	parent: [ 'jonasm/slider' ],
 
-    icon: 'format-image',
+	icon: 'format-image',
 
-    description: __( 'A single slide within a slider block.' ),
+	description: __( 'A single slide within a slider block.' ),
 
-    category: 'layout',
+	category: 'layout',
 
-    supports: {
-      anchor: true
-    },
+	supports: {
+		align: true,
+		anchor: true
+	},
 
-    attributes: {
-        backgroundColor: {
-            type: 'string',
-            default: ''
-        },
-        backgroundImage: {
-            type: 'string',
-            default: ''
-        },
-        image_D: {
-            type: 'string',
-            default: ''
-        },
-        image_L: {
-            type: 'string',
-            default: ''
-        },
-        image_P: {
-            type: 'string',
-            default: ''
-        },
-        image_M: {
-            type: 'string',
-            default: ''
-        },
+	attributes: {
+		backgroundColor: {
+			type: 'string',
+			default: ''
+		},
+		backgroundImage: {
+			type: 'string',
+			default: ''
+		},
+		image_D: {
+			type: 'string',
+			default: ''
+		},
+		image_L: {
+			type: 'string',
+			default: ''
+		},
+		image_P: {
+			type: 'string',
+			default: ''
+		},
+		image_M: {
+			type: 'string',
+			default: ''
+		},
 
-        image_alt: {
-            type: 'string',
-            default: ''
-        },
+		image_alt: {
+			type: 'string',
+			default: ''
+		},
 
-        image_title: {
-            type: 'string',
-            default: ''
-        },
-    },
+		image_title: {
+			type: 'string',
+			default: ''
+		},
+	},
 
-    edit: Editor,
+	edit: Editor,
 
-    save: Renderer
+	save: Renderer
 }
 
 /*

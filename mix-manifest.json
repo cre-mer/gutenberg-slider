@@ -1,6 +1,4 @@
 {
     "/dist/js/block.js": "/dist/js/block.js",
-    "/dist/css/editor.css": "/dist/css/editor.css",
-    "/dist/js/block.js.map": "/dist/js/block.js.map",
-    "/dist/css/editor.css.map": "/dist/css/editor.css.map"
+    "/dist/css/editor.css": "/dist/css/editor.css"
 }

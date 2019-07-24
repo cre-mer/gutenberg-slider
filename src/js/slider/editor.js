@@ -7,9 +7,10 @@ import memoize from 'memize';
 /**
  * Wordpress dependencies
  */
- const { createBlock } = wp.blocks;
+const { createBlock } = wp.blocks;
 const { PanelBody, RangeControl } = wp.components;
-const { InnerBlocks, InspectorControls } = wp.editor;
+const { InnerBlocks, InspectorControls } = wp.blockEditor;
+const { select } = wp.data;
 const { Fragment } = wp.element;
 const { __ } = wp.i18n;
 
@@ -28,29 +29,25 @@ const ALLOWED_BLOCKS = [ 'jonasm/slide' ]
  * Standard Template
  */
 const TEMPLATE = [
-    [ 'jonasm/slide' ],
-    [ 'jonasm/slide' ]
+	[ 'jonasm/slide' ]
 ]
 
 
 /*
 * Slider edit component
 */
-const Editor = ( { attributes, setAttributes } ) => {
+const Editor = ( { attributes, clientId, setAttributes } ) => {
 
-    const { slides } = attributes;
+	const sliderBlock = select('core/block-editor').getBlocksByClientId( clientId );
+	const slides  = sliderBlock[0].innerBlocks.length;
 
-    return (
-        <div className='jonasm-slider__wrapper'>
-            <div className={ `jonasm-slider has-${ slides }-slides` }>
-                <InnerBlocks
-                    allowedBlocks={ ALLOWED_BLOCKS }
-                    template={ TEMPLATE }
-                    templatelock
-                />
-            </div>
-        </div>
-    )
+	return (
+		<div className='jonasm-slider__wrapper'>
+			<div className={ `jonasm-slider has-${ slides }-slides` }>
+				<InnerBlocks />
+			</div>
+		</div>
+	)
 }
 
 export default Editor

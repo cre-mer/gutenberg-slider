@@ -6,60 +6,64 @@ const { Fragment } = wp.element;
 
 
 
-const Renderer = ( { attributes } ) => {
-	/**
-	* Slide inline style
-	*/
+const Renderer = props => {
+	const {
+            attributes: {
+                backgroundColor,
+				backgroundImage,
+				image_D,
+				image_L,
+				image_P,
+				image_M,
+				image_alt,
+				image_title
+            }
+        } = props;
+
+	var classes = 'jonasm-slide slide';
+	if (typeof (backgroundColor) !== 'undefined' && backgroundColor != '') {
+		classes += ' ' + backgroundColor;
+	}
+
+	// Slide inline style
 	const styles= () => {
-			if ( attributes.backgroundImage && attributes.backgroundColor ) {
+			if ( backgroundImage ) {
 				return {
-					backgroundImage: 'url(' + attributes.backgroundImage + ')',
-					backgroundColor: attributes.backgroundColor,
+					backgroundImage: 'url(' + backgroundImage + ')'
 				}
 			}
-			else if ( attributes.backgroundImage ) {
-				return {
-					backgroundImage: 'url(' + attributes.backgroundImage + ')'
-				}
-			}
-			else if ( attributes.backgroundColor ) {
-				return {
-					backgroundColor: attributes.backgroundColor
-				}
-			}
-			else ''
 		}
 
 
 return (
 	<Fragment>
 		<div
-			className='jonasm-slide slide'
-			style={ styles() }
+			className={ classes }
+			style={ styles }
 		>
-			{ attributes.image_D || attributes.image_L || attributes.image_P || attributes.image_M ?
+			{ image_D || image_L || image_P || image_M ?
 				<div className='slide-media__wrapper'>
 					<picture className='slide-media'>
-					{ attributes.image_D ?
-						<source media='(min-width: 1439px)' srcSet={ attributes.image_D } />
+					{ image_D ?
+						<source media='(min-width: 1439px)' srcSet={ image_D } />
 					:
 						''
 					}
-					{ attributes.image_L ?
-						<source media='(min-width: 1023px)' srcSet={ attributes.image_L } />
+					{ image_L ?
+						<source media='(min-width: 1023px)' srcSet={ image_L } />
 					:
 						''
 					}
-					{ attributes.image_P ?
-						<source media='(min-width: 767px)' srcSet={ attributes.image_P } />
+					{ image_P ?
+						<source media='(min-width: 767px)' srcSet={ image_P } />
 					:
 						''
 					}
 						<img
 							className='slide-media__image'
-							src={ attributes.image_M }
-							alt={ attributes.image_alt }
-							title={ attributes.image_title }
+							src={ image_M }
+							alt={ image_alt }
+							title={ image_title }
 						/>
 					</picture>
 				</div>

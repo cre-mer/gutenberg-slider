@@ -4,8 +4,8 @@ A WordPress Gutenberg Slider
 
 ## Features
 
-* Slider block wrapper that accepts only slide blocks
-* Slide block that saves InnerBlocks
+* Slider block wrapper that accepts any block.
+* Slide block is a wrapper for InnerBlocks. You can add a custom background color, a background image, and different image sizes for different viewports.
 
 ## Setup
 
@@ -13,9 +13,7 @@ Run yarn or npm install
 
 ## Changelog
 
-### v0.1.0
-
-* Initial release
+### v1.1.1
 
 ## Backend
 ### The slider block
